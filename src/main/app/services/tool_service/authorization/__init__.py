@@ -1,0 +1,1 @@
+"""Server-side action authorization."""

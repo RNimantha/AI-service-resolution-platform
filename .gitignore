@@ -1,0 +1,30 @@
+# Local environments and caches
+.venv/
+.cache/
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+
+# Local credentials and infrastructure state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Runtime data and artifacts
+data/
+artifacts/
+recordings/
+*.log
+.DS_Store
