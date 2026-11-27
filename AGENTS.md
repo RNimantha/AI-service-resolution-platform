@@ -5,6 +5,9 @@
 - Create and use a separate `feature/<descriptive-name>` branch for each new piece of work.
 - Commit and push all relevant project changes on the feature branch. Keep credentials, local data, and generated artifacts excluded.
 - Do not commit or push directly to `main` unless the user explicitly requests it.
+- Before pushing, run `git fetch --prune origin` and rebase the feature branch onto `origin/main` to keep history linear. Incorporate any remote feature-branch commits before rebasing; do not discard collaborators' work.
+- Use a normal push when it is a fast-forward. After rebasing previously pushed feature commits, use `git push --force-with-lease` with an explicit expected remote commit; if the lease fails, inspect and reconcile the remote changes before retrying.
+- Never use plain `--force` or rewrite `main` history. Keep commits focused and run the required checks before pushing.
 
 ## Python files
 
